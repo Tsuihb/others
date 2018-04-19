@@ -19,6 +19,17 @@ yield: 相当于一个开关，而 next是触发这个开关
 return: 可以中断操作一个操作
 
 
+*yield  
+形如：function*xxx{
+    yield xxx;
+    yield* fn();
+    yield yyy;
+    yield zzz;
+    return;
+}
+
+是将代码的控制权交给了，yield* fn();等着函数执行完之后，再会给xxx();
+
 */
 
 
