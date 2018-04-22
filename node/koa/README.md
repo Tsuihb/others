@@ -17,7 +17,7 @@ app.use(mid)
 
 ```javascript
 function mid(ctx){
-    if(ctx.url=='\'){
+    if(ctx.url=='/'){
         ctx.body = 'hello index'
     }else if(ctx.url=='/baidu'){
         ctx.body = 'hello baidu'
