@@ -11,17 +11,16 @@ var Socket = new WebSocket(url, [protocol] );
 ## WebSocket 属性
 *  根据ctx.url来判断:
 
-```javascript
-function mid(ctx){
-    if(ctx.url=='/'){
-        ctx.body = 'hello index'
-    }else if(ctx.url=='/baidu'){
-        ctx.body = 'hello baidu'
-    }else{
-        ctx.body = '404'
-    }
-}
-```
+|  属性 | 描叙 | 
+|   :-  |  :- |  
+| Socket.readyState | 只读属性 readyState 表示连接状态，可以是以下值：
+                      0 - 表示连接尚未建立。
+                      1 - 表示连接已建立，可以进行通信。
+                      2 - 表示连接正在进行关闭。
+                      3 - 表示连接已经关闭或者连接不能打开。|
+                                                                
+| Socket.bufferedAmount | 只读属性 bufferedAmount 已被 send() 放入正在队列中等待传输，但是还没有发出的 UTF-8 文本字节数。 | 
+
 *  使用node-router:
 
 ```javascript
@@ -160,19 +159,16 @@ app.on('error', (err, ctx) =>
 );
 ```
 #### 未完待续。。。
-
+# hah
+======
 Name | Academy | score 
 - | :-: | -: 
 Harry Potter | Gryffindor| 90 
 Hermione Granger | Gryffindor | 100 
 Draco Malfoy | Slytherin | 90
 =======
-# hah
-| Name | Academy | score | 
-|   :-  |  :- |   :-   | 
-| Harry Potter | Gryffindor| 90 | 
-| Hermione Granger | Gryffindor | 100 | 
-| Draco Malfoy | Slytherin | 90 |
+
+
 
 
 | 参数 |详细解释|备注| 
