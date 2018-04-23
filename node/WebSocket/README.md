@@ -160,3 +160,23 @@ app.on('error', (err, ctx) =>
 );
 ```
 #### 未完待续。。。
+
+Name | Academy | score 
+- | :-: | -: 
+Harry Potter | Gryffindor| 90 
+Hermione Granger | Gryffindor | 100 
+Draco Malfoy | Slytherin | 90
+=======
+# hah
+| Name | Academy | score | 
+| - | :-: | -: | 
+| Harry Potter | Gryffindor| 90 | 
+| Hermione Granger | Gryffindor | 100 | 
+| Draco Malfoy | Slytherin | 90 |
+
+
+| 参数 |详细解释|备注| 
+| - | - | 
+| -l | use a long listing format |以长列表方式显示（显示出文件/文件夹详细信息） | 
+| -t | sort by modification time |按照修改时间排序（默认最近被修改的文件/文件夹排在最前面） | 
+|-r | reverse order while sorting |逆序排列|
