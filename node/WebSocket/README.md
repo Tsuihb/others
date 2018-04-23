@@ -13,9 +13,10 @@ var Socket = new WebSocket(url, [protocol] );
 
 |  属性 | 描叙 | 
 |   :-  |  :- |  
+| Socket.bufferedAmount | 只读属性 bufferedAmount 已被 send() 放入正在队列中等待传输，但是还没有发出</br>的 UTF-8 文本字节数。| 
 | Socket.readyState | 只读属性 readyState 表示连接状态，可以是以下值：</br>0 - 表示连接尚未建立。</br>1 - 表示连接已建立，可以进行通信。</br>2 - 表示连接正在进行关闭。</br>3 - 表示连接已经关闭或者连接不能打开。|
                                                                 
-| Socket.bufferedAmount | 只读属性 bufferedAmount 已被 send() 放入正在队列中等待传输，但是还没有发出</br>的 UTF-8 文本字节数。 | 
+
 
 *  使用node-router:
 
