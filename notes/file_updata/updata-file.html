@@ -9,19 +9,63 @@
   </style>
 </head>
 <body>
+  <h1>单个图片预览</h1>
   <div>
-    <form action="" method="post" id="from">
-      <label for="">姓名：</label>
-      <input type="text" name="username" id="username"><br>
-      <label for="">年龄：</label>
-      <input type="text" name="age" id="age"><br>
-      <label for="">上传文件</label>
-      <input type="file" id="file">
-    </form>
+    <label for="">图片上传：</label>
+    <input type="file" id="file" name="file" onchange="preimg()">
+    <img src=""  height="200" width="200" style="display:block">
   </div>
 
+  <h1>多个图片预览</h1>
+  <div>
+    <input id="browse" type="file" onchange="previewFiles()" multiple>
+    <div id="preview"></div>
+  </div>
   <script>
-    
+    function preimg() {
+      var getfile = document.getElementById("file");
+      var getimg = document.querySelector("img");
+      var file = getfile.files[0];
+      var readfile = new FileReader();
+      if( file ) readfile.readAsDataURL(file);
+      readfile.addEventListener("load", function () {
+        getimg.src = readfile.result;
+        console.log(readfile.result)
+      }, false);
+    }
+
+  function previewFiles() {
+
+    var preview = document.querySelector('#preview');
+    var files   = document.querySelector('input[id=browse]').files;
+    console.log(files);
+
+    function readAndPreview(file) {
+
+      // 确保 `file.name` 符合我们要求的扩展名
+      if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
+        var reader = new FileReader();
+
+        reader.addEventListener("load", function () {
+          var image = new Image();
+          image.height = 200;
+          image.width = 200;
+          image.title = file.name;
+          image.src = this.result;
+          preview.appendChild( image );
+        }, false);
+
+        reader.readAsDataURL(file);
+      }
+
+    }
+
+    if (files) {
+      [].forEach.call(files, readAndPreview);
+      
+    }
+
+  }
   </script>
 </body>
 </html>
