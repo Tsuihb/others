@@ -72,5 +72,12 @@ INSERT INTO table_name ( field1, field2,...fieldN )
 * FROM table_name
 * [WHERE Clause]
 * [LIMIT N][ OFFSET M]
+## 
+## UPDATE 语句
+* UPDATE runoob_tbl SET runoob_title='学习 C++' WHERE runoob_id=3;
 
 ## WHERE 语句
+* SELECT * from runoob_tbl WHERE runoob_author='菜鸟教程';
+
+## DELETE 语句
+* DELETE FROM runoob_tbl WHERE runoob_id=3;
