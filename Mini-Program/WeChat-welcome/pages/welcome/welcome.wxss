@@ -1,0 +1,25 @@
+.cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #333;
+}
+.wel-ava{
+    height: 200rpx;
+    width: 200rpx;
+    border-radius: 50%;
+    margin-top: 160rpx;
+}
+.u-name{
+  font-family: serif;
+  font-size: 22rpx;
+}
+.dsc-text{
+  font-size: 20rpx;
+
+}
+page{
+  height: 100%;
+  width: 100%;
+    background: #333;
+}

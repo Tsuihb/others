@@ -1,0 +1,8 @@
+
+<view class='cont'>
+  <image class="wel-ava" src='/images/1.jpg'></image>
+  <text class='u-name'>hello, Tsuihb</text>
+  <view>
+    <text class='dsc-text'>欢迎来到我的第一个微信小程序啊。</text>
+  </view>
+</view>
