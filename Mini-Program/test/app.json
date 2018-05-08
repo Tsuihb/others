@@ -1,0 +1,26 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "这是小程序测试",
+    "navigationBarTextStyle":"#000"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/3.png",
+      "selectedIconPath": "images/3.png"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "下一页",
+      "iconPath": "images/2.png",
+      "selectedIconPath": "images/2.png"
+    }
+    ]
+  }
+}

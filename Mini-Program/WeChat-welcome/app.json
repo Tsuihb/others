@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/posts/posts",
+    "pages/post-detail/post-detail",
+    
     "pages/welcome/welcome"
+    
+    
+
   ]
 }

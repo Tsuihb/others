@@ -1,4 +1,5 @@
-// pages/welcome/welcome.js
+// pages/post-detail/post-detail.js
+var detailData = require("../../data/data.js")
 Page({
 
   /**
@@ -12,35 +13,39 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("我是welcome下的 onLoad")
+    var postId = options.id;
+    /* this.data = detailData.post_list[postId];
+    console.log(this.data) */
+    this.setData(detailData.post_list[postId]);
+    wx.setStorageSync("key", "one")
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("我是welcome下的 onReady")
+  
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("我是welcome下的 onShow")
+  
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log("我是welcome下的 onHide")
+  
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log("我是welcome下的 onUnload")
+  
   },
 
   /**
@@ -62,24 +67,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  onTap: function(e){
-    /* wx.navigateTo({
-      url: '../posts/posts',
-      success:function(){
-        console.log(1)
-      },
-      fail:function() {
-        console.log(0)
-      },
-      complete:function(){
-        console.log(3)
-      }
-    }) */
-    console.log(wx)
-    wx.navigateTo({
-      url: '../posts/posts',
-    })
   }
 })

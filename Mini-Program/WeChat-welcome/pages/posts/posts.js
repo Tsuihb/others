@@ -1,46 +1,56 @@
-// pages/welcome/welcome.js
+// pages/posts/posts.js
+var postsData=require("../../data/data.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
-  },
 
+  },
+  a: function() {
+
+  },
+  b: function() {
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("我是welcome下的 onLoad")
+    console.log(this.data);
+     this.setData({
+      post_key: postsData.post_list
+    }) 
+    console.log("我是posts下的 onReady")
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("我是welcome下的 onReady")
+    console.log("我是posts下的 onLoad")
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("我是welcome下的 onShow")
+    console.log("我是posts下的 onShow")
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log("我是welcome下的 onHide")
+    console.log("我是posts下的 onHide")
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log("我是welcome下的 onUnload")
+    console.log("我是posts下的 onUnload")
   },
 
   /**
@@ -63,23 +73,12 @@ Page({
   onShareAppMessage: function () {
   
   },
-
-  onTap: function(e){
-    /* wx.navigateTo({
-      url: '../posts/posts',
-      success:function(){
-        console.log(1)
-      },
-      fail:function() {
-        console.log(0)
-      },
-      complete:function(){
-        console.log(3)
-      }
-    }) */
-    console.log(wx)
+  onPostTap:function(e){
+    console.log(e)
+    var postId = e.currentTarget.dataset.postid;
+    console.log(postId)
     wx.navigateTo({
-      url: '../posts/posts',
+      url: '../post-detail/post-detail?id=' + postId,
     })
   }
 })

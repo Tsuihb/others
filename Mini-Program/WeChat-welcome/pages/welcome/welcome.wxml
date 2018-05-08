@@ -2,7 +2,7 @@
 <view class='container'>
   <image class='user-avatar' src='/images/avatar/avatar.png'></image>
   <text class='user-name'>hello, 昆仑</text>
-  <view class='moto-container'>
+  <view catchtap='onTap' class='moto-container'>
     <text class='moto'>点击进入</text>
   </view>
 </view>
