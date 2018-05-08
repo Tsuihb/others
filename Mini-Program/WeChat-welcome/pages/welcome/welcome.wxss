@@ -1,25 +1,34 @@
-.cont{
+/* pages/welcome/welcome.wxss */
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #333;
 }
-.wel-ava{
-    height: 200rpx;
-    width: 200rpx;
-    border-radius: 50%;
-    margin-top: 160rpx;
+.user-avatar{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 160rpx;
 }
-.u-name{
-  font-family: serif;
+.user-name{
+  margin-top: 100rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.moto-container{
+  margin-top: 200rpx;
+  border: 1px solid #450f80;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 5px;
+  text-align: center;
+}
+.moto{
   font-size: 22rpx;
-}
-.dsc-text{
-  font-size: 20rpx;
-
+  font-weight: bold;
+  line-height: 80rpx;
+  color: #450f80
 }
 page{
   height: 100%;
-  width: 100%;
-    background: #333;
+  background: #b3d4db;
 }
