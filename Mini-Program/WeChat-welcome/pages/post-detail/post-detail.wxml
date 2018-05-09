@@ -1,7 +1,7 @@
 <!--pages/post-detail/post-detail.wxml-->
 <view class='container'>
-  <image class='head-image' src='{{headImgSrc}}'></image>
-  <image  class='audio' src='/images/music/music-start.png'></image>
+  <image catchtap='onShow' class='head-image' src='{{headImgSrc}}'></image>
+  <image catchtap='musicOntap'  class='audio' src='/images/music/music-start.png'></image>
   <view  class='author-date'>
     <image class='avatar' src='{{author_img}}'></image>
     <text class='author'>{{author}}</text>
@@ -10,8 +10,10 @@
   </view>
   <text class='title'>{{title}}</text>
   <view class='tool'>
-    <image class='circle-img' src='/images/icon/collection.png'></image>
     <image class='share-img' src='/images/icon/share.png'></image>
+    <image catchtap='onColletionTap'  wx:if="{{collected}}" class='circle-img' src='/images/icon/collection.png'></image>
+    <image  catchtap='onColletionTap'  wx:else class='circle-img' src='/images/icon/collection-anti.png'></image>
+    
   </view>
   <view class='horizon'></view>
   <text class='detail'>{{detail}}</text>
